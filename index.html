@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SparkUp: Install Apache Spark on Windows</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            line-height: 1.6;
+        }
+        code {
+            background-color: #f2f2f2;
+            padding: 2px 4px;
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Welcome to SparkUp!</h1>
+<p>This tool will help you install Apache Spark on your Windows machine in a few simple steps.</p>
+
+<h2>Installation</h2>
+<p>Execute the following in PowerShell:</p>
+
+<code>Invoke-Expression ([System.Text.Encoding]::UTF8.GetString((Invoke-WebRequest -Uri https://sparkup.github.io/sparkup.ps1 -UseBasicParsing).Content))</code>
+
+<p>After the script has run, restart your PowerShell session or start a new one to ensure all changes take effect.</p>
+
+<h2>Requirements</h2>
+<p>The script checks for the following prerequisites:</p>
+<ul>
+    <li>Java installed and available in the PATH.</li>
+    <li>Python installed and available in the PATH.</li>
+</ul>
+
+<h2>What does the script do?</h2>
+<p>The `sparkup.ps1` script performs the following actions:</p>
+<ul>
+    <li>Downloads Apache Spark to your user directory.</li>
+    <li>Updates the <code>PYTHONPATH</code> to include paths for PySpark and Py4J.</li>
+    <li>Downloads the necessary <code>winutils.exe</code> for Hadoop compatibility on Windows.</li>
+    <li>Sets up <code>SPARK_HOME</code> and <code>HADOOP_HOME</code> environment variables.</li>
+</ul>
+
+<h2>Getting Started with Spark</h2>
+<p>Once the installation completes, you can start using Apache Spark! Try out the <code>spark-shell</code> or <code>pyspark</code> commands in your terminal to launch the Spark interactive shells.</p>
+
+<h2>Troubleshooting</h2>
+<p>If you encounter any issues:</p>
+<ul>
+    <li>Ensure you meet all prerequisites.</li>
+    <li>Check if the environment variables <code>SPARK_HOME</code> and <code>HADOOP_HOME</code> are set correctly.</li>
+    <li>Review the script's output for any error messages.</li>
+</ul>
+
+<h2>Contact</h2>
+<p>For further inquiries or issues, please contact fplotnicki@gmail.com.</p>
+
+</body>
+</html>
